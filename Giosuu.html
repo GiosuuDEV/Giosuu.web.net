@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giosuu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            backdrop: 'rgba(255, 255, 255, 0.1)'
+          },
+          animation: {
+            fade: 'fade 3s ease-in-out forwards',
+            zoom: 'zoom 0.5s ease-in-out',
+            pulseOnce: 'pulseOnce 1s ease-out'
+          },
+          keyframes: {
+            fade: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            zoom: {
+              '0%': { transform: 'scale(0.8)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 }
+            },
+            pulseOnce: {
+              '0%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.1)' },
+              '100%': { transform: 'scale(1)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  </head>
+<body class="text-white dark:text-gray-100 font-sans transition duration-500">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-10">
+    <source src="https://r1---sn-pm2-hjil.googlevideo.com/videoplayback?expire=1749891761&ei=UeZMaKSdC8-v9fgPz_G9kQo&ip=176.1.134.158&id=o-AJFcguvsT9jAZ8EvnC2xtqdd7V4DoxxIzR8SO_bsvJR1&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&rms=au%2Cau&bui=AY1jyLPR70aev0x89a_l8uaMQNV70KSKoRI1MfBaMSV4tQ1cnjser8KuC3ip5bBNp2XCvQ64uUDlO-LU&spc=l3OVKT4JLhghCYrKsdn7UcU5-aCl6ndpMUI92o5VTdl3JeUcf0TBlRE&vprv=1&svpuc=1&mime=video%2Fmp4&ns=omE8JvSMJi-BLeECtHh33yIQ&rqh=1&cnr=14&ratebypass=yes&dur=1799.244&lmt=1748903464947461&fexp=51331020&c=MWEB&sefc=1&txp=5438534&n=V4ZHzrQ86Vpg1A&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgAmULG4jtoa0S3npEgk-pKNhGBE-So_scll528tLHTsUCIGrqbTTPki-2L7PZHWqRBUTl1cAP5h1fp-PaJf5JTa28&pot=MnS4naPw216Gwrihk1yr_-bxPlIvlxL-3h9LLh-DYkC3KHFKiHv9i9eENPTB7MSZ5RbG7fj02blGLeHDno17XNIVwNACfM0K1LJicDcMsX6d7U6dFLsVb4pxB8KHf8-FuURhHEgP6fiJmylsn_vZblh7L6jsdQ==&cms_redirect=yes&met=1749870634,&mh=m6&mip=200.24.149.194&mm=31&mn=sn-pm2-hjil&ms=au&mt=1749870062&mv=m&mvi=1&pcm2cms=yes&pl=24&lsparams=met,mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl,rms&lsig=APaTxxMwRQIhAO0TfoYHY_IoxjqBdphY3rKPR7n5NyLp6e1XvR-lZjkOAiBw44_8ccr5P77rZcsO-JM7SH45yZES5BqZvmQ-cHJxQw%3D%3D" type="video/mp4" />
+    Tu navegador no soporta video de fondo.
+  </video>
+  <div class="fixed top-0 left-0 w-full h-full bg-black/40 -z-5"></div>
+  <style>
+    @keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+  </style>
+</head>
+  <!-- Toggle dark mode -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="toggleDark" class="bg-white/20 backdrop-blur text-white dark:text-gray-900 dark:bg-white px-4 py-2 rounded-lg shadow hover:scale-105 transition">🔦</button>
+  </div>
+</body>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center text-center px-6 animate-zoom">
+    <div class="bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-2xl p-10 shadow-2xl max-w-2xl">
+      <h1 class="text-5xl font-extrabold mb-4 animate-fade">Giosuu Web</h1>
+      <p class="text-xl mb-6 animate-fade delay-200">Creado por Axel Gutierréz.</p>
+      <a href="#explora" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-full transition animate-pulseOnce">Explorar</a>
+    </div>
+  </section>
+
+  <!-- Sección interactiva -->
+  <section id="explora" class="py-20 px-6 animate-fade">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+      <div class="bg-white/20 dark:bg-black/30 backdrop-blur-md p-8 rounded-xl shadow-lg hover:scale-105 transition">
+        <h2 class="text-3xl font-bold mb-2">¿Para que fue creada esta pagina?</h2>
+        <p>Para futuros trabajo del Colegio, la verdad el colegio me tiene cansado, todos los dias estudiar y estudiar 😭  .</p>
+      </div>
+      <div class="bg-white/20 dark:bg-black/30 backdrop-blur-md p-8 rounded-xl shadow-lg hover:scale-105 transition">
+        <h2 class="text-3xl font-bold mb-2">Que opino sobre el estupido Colegio</h2>
+        <p>La verdad me tiene cansado, El colegio y los profesores, en especial la vieja de la deynicita, nose ni como se escribe pero esa vieja la odio tanto, no solo yo todo el colegio, hasta los profesores.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Portafolio -->
+  <section id="portafolio" class="py-20 px-6 animate-fade">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Mis Proyectos</h2>
+      <p class="text-lg">No tengo foto de mis proyectos :C</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-lg p-6 shadow-lg hover:scale-105 transition">
+        <h3 class="text-2xl font-semibold mb-2">Proyecto 1</h3>
+        <p>No hay foto</p>
+      </div>
+      <div class="bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-lg p-6 shadow-lg hover:scale-105 transition">
+        <h3 class="text-2xl font-semibold mb-2">Proyecto 2</h3>
+        <p>no hay foto</p>
+      </div>
+      <div class="bg-white/20 dark:bg-black/30 backdrop-blur-md rounded-lg p-6 shadow-lg hover:scale-105 transition">
+        <h3 class="text-2xl font-semibold mb-2">Proyecto 3</h3>
+        <p>no hay foto</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="py-20 px-6 animate-fade">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Contacto</h2>
+      <p class="mb-6">creo paginas web a bajos precios Axel Gutierrez el mejor! xd</p>
+      <form class="space-y-4">
+        <input type="text" placeholder="Tu nombre" class="w-full px-4 py-2 rounded bg-white/20 backdrop-blur-md text-white placeholder-white/80 focus:outline-none">
+        <input type="email" placeholder="Tu correo" class="w-full px-4 py-2 rounded bg-white/20 backdrop-blur-md text-white placeholder-white/80 focus:outline-none">
+        <textarea rows="4" placeholder="Tu mensaje" class="w-full px-4 py-2 rounded bg-white/20 backdrop-blur-md text-white placeholder-white/80 focus:outline-none"></textarea>
+        <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 px-6 py-2 rounded-full text-white transition">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-sm opacity-60 animate-fade">
+    All rights reserved by the company Giosuu • Designed by Axel Gutierrez • 2025
+  </footer>
+
+  <script>
+    document.getElementById('toggleDark').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
